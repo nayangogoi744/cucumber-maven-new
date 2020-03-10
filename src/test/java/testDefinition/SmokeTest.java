@@ -15,7 +15,13 @@ public class SmokeTest {
 
 	@Given("^Open firefox and start application$")
 	public void Open_firefox_and_start_application() throws Throwable {
-		System.setProperty("webdriver.gecko.driver","C:\\Essentials\\jar_files\\geckodriver.exe");
+		String os = System.getProperty("os.name");
+		System.out.println(os);
+		if(os.equals("Windows 10")){
+		System.setProperty("webdriver.gecko.driver","C:\\Essentials\\jar_files\\geckodriver.exe");}
+		else
+		System.setProperty("webdriver.gecko.driver", "//home//nayan//geckodriver-v0.24.0-linux64//geckodriver");
+		
 	    driver = new FirefoxDriver();
 	    driver.manage().window().maximize();
 	    driver.get("http://www.facebook.com");
@@ -31,7 +37,7 @@ public class SmokeTest {
 	public void user_should_be_able_to_login_successfully() throws Throwable {
 	    driver.findElement(By.id("loginbutton")).click();
 	    Thread.sleep(2000);
-	    driver.quit();
+	    driver.close();
 	}
 
 }
