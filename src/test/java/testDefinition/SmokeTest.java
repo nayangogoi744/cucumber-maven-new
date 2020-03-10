@@ -30,6 +30,8 @@ public class SmokeTest {
 	@Then("^user should be able to login successfully$")
 	public void user_should_be_able_to_login_successfully() throws Throwable {
 	    driver.findElement(By.id("loginbutton")).click();
+	    Thread.sleep(2000);
+	    driver.quit();
 	}
 
 }
