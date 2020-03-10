@@ -37,7 +37,11 @@ public class SmokeTest {
 	public void user_should_be_able_to_login_successfully() throws Throwable {
 	    driver.findElement(By.id("loginbutton")).click();
 	    Thread.sleep(2000);
-	    driver.close();
+	   
+	}
+	@Then("application should be closed")
+	public void application_should_be_closed() {
+	    driver.quit();
 	}
 
 }
