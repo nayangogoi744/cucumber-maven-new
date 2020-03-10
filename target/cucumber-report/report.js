@@ -21,6 +21,10 @@ formatter.step({
   "name": "user should be able to login successfully",
   "keyword": "Then "
 });
+formatter.step({
+  "name": "application should be closed",
+  "keyword": "Then "
+});
 formatter.examples({
   "name": "",
   "description": "",
@@ -87,6 +91,16 @@ formatter.match({
 formatter.result({
   "status": "passed"
 });
+formatter.step({
+  "name": "application should be closed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "testDefinition.SmokeTest.application_should_be_closed()"
+});
+formatter.result({
+  "status": "passed"
+});
 formatter.scenario({
   "name": "Test Login with valid credentials",
   "description": "",
@@ -122,6 +136,16 @@ formatter.match({
 formatter.result({
   "status": "passed"
 });
+formatter.step({
+  "name": "application should be closed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "testDefinition.SmokeTest.application_should_be_closed()"
+});
+formatter.result({
+  "status": "passed"
+});
 formatter.scenario({
   "name": "Test Login with valid credentials",
   "description": "",
@@ -153,6 +177,16 @@ formatter.step({
 });
 formatter.match({
   "location": "testDefinition.SmokeTest.user_should_be_able_to_login_successfully()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "application should be closed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "testDefinition.SmokeTest.application_should_be_closed()"
 });
 formatter.result({
   "status": "passed"
